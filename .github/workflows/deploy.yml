@@ -52,10 +52,11 @@ jobs:
             - name: Setup Pages
               uses: actions/configure-pages@v5
 
+            # 上传整个 dist 文件夹，包含 404.html 和 .nojekyll
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v4
               with:
-                  path: "./dist" # 上传整个 dist 文件夹，包含 404.html 和 .nojekyll
+                  path: "./dist"
 
             - name: Deploy to GitHub Pages
               id: deployment
