@@ -1,0 +1,65 @@
+// out: false
+
+@import url("./public/flex.less");
+@import url("./public/var.less");
+@import url("./public/mix.less");
+
+main {
+    h1.page-title,
+    h2 {
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.625rem;
+        border-bottom: 0.125rem solid @primary-color;
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-right: 0.625rem;
+            color: @secondary-color;
+        }
+    }
+}
+
+.work-module {
+    h3 {
+        .flex-center();
+        margin: 1.25rem 0;
+        font-size: 1.25rem;
+
+        i {
+            margin-right: 0.625rem;
+            color: #88d3ce;
+        }
+
+        p.title {
+            &.mf {
+                margin-left: 3rem;
+            }
+
+            &.mr {
+                margin-right: 3rem;
+            }
+        }
+
+        .refresh {
+            .flex-center();
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            transform-origin: 50% 50%;
+
+            &.rotating {
+                animation: rotate 0.5s linear;
+            }
+
+            &:active {
+                opacity: 0.5;
+            }
+
+            * {
+                margin: 0;
+            }
+        }
+    }
+}

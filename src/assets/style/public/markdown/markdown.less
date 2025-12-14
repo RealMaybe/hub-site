@@ -1,0 +1,277 @@
+// out: false
+
+@import url("./markdownVar.less");
+
+// 正式作用域：插件默认会包一层 .markdown-body
+.markdown-body {
+    color: @md-text-normal;
+    font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+    line-height: @md-line-height;
+    letter-spacing: 0.015em;
+    padding: 0.0625rem 1rem;
+
+    @media (max-width: @tablet-breakpoint) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media (max-width: @mobile-breakpoint) {
+        font-size: 0.875rem;
+    }
+
+    // 特殊格式
+
+    // 加粗
+    b,
+    strong {
+        color: @md-text-bright;
+    }
+
+    // 下划线
+    u,
+    ins {
+        .underline(@md-text-normal);
+    }
+
+    // 标题
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 2rem 0 1rem;
+        font-weight: 600;
+        color: @md-primary;
+        scroll-margin-top: 4rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        border-image: linear-gradient(90deg, @md-primary, @md-accent) 1;
+        border-bottom: 0.125rem solid;
+        padding-bottom: 0.4em;
+
+        @media (max-width: @mobile-breakpoint) {
+            font-size: 2rem;
+        }
+    }
+
+    h2 {
+        font-size: 1.8rem;
+
+        @media (max-width: @mobile-breakpoint) {
+            font-size: 1.5rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+
+        @media (max-width: @mobile-breakpoint) {
+            font-size: 1.3rem;
+        }
+    }
+
+    h4 {
+        font-size: 1.3rem;
+
+        @media (max-width: @mobile-breakpoint) {
+            font-size: 1.1rem;
+        }
+    }
+
+    h5 {
+        font-size: 1.1rem;
+        color: @md-text-dim;
+
+        @media (max-width: @mobile-breakpoint) {
+            font-size: 1rem;
+        }
+    }
+
+    h6 {
+        font-size: 1rem;
+        color: @md-text-dim;
+        font-weight: 500;
+
+        @media (max-width: @mobile-breakpoint) {
+            font-size: 0.875rem;
+        }
+    }
+
+    // 段落
+    p {
+        margin: 0 0 0.25rem;
+        color: @md-text-normal;
+        line-height: 1.55;
+    }
+
+    // 行内代码
+    p,
+    li,
+    td {
+        code {
+            background: fade(@md-primary, 12%);
+            color: @md-accent;
+            padding: 0.2em 0.35em;
+            border-radius: 0.1875rem;
+            font-size: 0.88em;
+            font-family: @md-font-code;
+        }
+    }
+
+    // 代码块
+    pre {
+        .card-base();
+        padding: 1rem;
+        margin: 0.75rem 0;
+        overflow-x: auto;
+        line-height: 1.55;
+
+        code {
+            background: none;
+            color: @md-text-bright;
+            padding: 0 !important;
+            border-radius: 0;
+            font-size: 0.875rem;
+            font-family: "Fira Code", Consolas, "Courier New", monospace;
+        }
+    }
+
+    // 表格
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.2rem 0;
+
+        th,
+        td {
+            padding: 0.6rem 0.8rem;
+            border: 0.125rem solid @md-border;
+        }
+
+        th {
+            background: fade(@md-primary, 30%);
+            color: @md-text-bright;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background: fade(@md-bg-deep, 50%);
+        }
+    }
+
+    // 引用
+    blockquote {
+        @p-t: 0.75rem; // 上方
+        @p-r: 1rem; // 右侧
+        @p-b: 0.75rem; // 底部
+        @p-l: 2.5rem; // 左侧
+
+        margin: 1rem 0;
+        padding: @p-t @p-r @p-b @p-l;
+        position: relative;
+        .card-base();
+        color: @md-text-dim;
+        opacity: 0.7;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        // 左侧装饰条
+        &::before {
+            @before-margin-top: @p-t + 0.125rem;
+            @before-margin-bottom: @p-b + 0.125rem;
+
+            content: "";
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.25rem;
+            height: calc(100% - @before-margin-top - @before-margin-bottom);
+            background: @md-accent;
+            border-radius: 0.125rem;
+        }
+    }
+
+    // 列表
+    ul,
+    ol {
+        padding-left: 1.6rem;
+    }
+
+    li {
+        margin: 0.35rem 0;
+    }
+
+    // 分割线
+
+    hr {
+        .hr-nebula(@hr-dark-line, @hr-dark-glow); // 默认：暗底场景
+    }
+
+    // &.light hr {
+    //     .hr-nebula(@hr-light-line, @hr-light-glow); // 亮底卡片，需给父级加 .light
+    // }
+
+    // 链接
+    a {
+        color: @md-primary;
+        .underline(fade(@md-primary, 35%));
+        transition: all 0.2s;
+
+        &:hover {
+            color: @md-text-bright;
+            border-bottom-color: @md-text-bright;
+        }
+    }
+
+    // 图片
+    img {
+        max-width: 100%;
+        margin: 1.2rem auto;
+        display: block;
+        border-radius: @md-radius;
+        box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+    }
+
+    // 任务列表
+    .task-list-item {
+        list-style: none;
+
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+            accent-color: @md-primary;
+        }
+    }
+
+    span {
+        // 行内小标题
+        &.tag-inline-title {
+            display: inline-block;
+            width: 4rem;
+            margin-right: 0.5rem;
+            font-weight: bold;
+            color: @md-inline-title;
+            text-shadow: 0 0 2px rgba(127, 209, 255, 0.3);
+        }
+
+        // 行内 Icon 图标
+        &.tag-inline-icon {
+            @h: 1.5rem;
+
+            display: inline-block;
+            width: @h;
+            height: @h;
+            line-height: @h;
+            margin-right: 0.5rem;
+            color: @md-inline-title;
+            text-align: center;
+        }
+    }
+}

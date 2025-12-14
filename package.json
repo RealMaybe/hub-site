@@ -16,12 +16,21 @@
         "format": "prettier --write src/"
     },
     "dependencies": {
+        "dayjs": "^1.11.19",
+        "front-matter": "^4.0.2",
+        "highlight.js": "^11.11.1",
+        "less": "^4.4.2",
+        "markdown-it": "^14.1.0",
+        "markdown-it-anchor": "^9.2.0",
+        "markdown-it-highlightjs": "^4.2.0",
         "pinia": "^3.0.3",
+        "unplugin-vue-markdown": "^29.2.0",
         "vue": "^3.5.22",
         "vue-router": "^4.6.3"
     },
     "devDependencies": {
         "@tsconfig/node22": "^22.0.2",
+        "@types/markdown-it": "^14.1.2",
         "@types/node": "^22.18.11",
         "@vitejs/plugin-vue": "^6.0.1",
         "@vue/eslint-config-prettier": "^10.2.0",

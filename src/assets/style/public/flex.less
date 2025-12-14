@@ -1,0 +1,103 @@
+// out: false
+
+// ========================
+
+
+// flex 弹性布局
+// flexbox默认以横轴为主轴，纵轴为交叉轴
+
+
+// ========================
+
+
+// 主轴上对齐方式为居中，交叉轴上对齐方式为顶部对齐
+.flex-center-start() {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+// 主轴上对齐方式为居中，交叉轴上对齐方式为居中对齐
+.flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+// 主轴上对齐方式为居中，交叉轴上对齐方式为底部对齐
+.flex-center-end() {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+// 主轴上对齐方式为两端对齐，交叉轴上对齐方式为顶部对齐
+.flex-between-start() {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+// 主轴上对齐方式为两端对齐，交叉轴上对齐方式为居中对齐
+.flex-between-center() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// 主轴上对齐方式为两端对齐，交叉轴上对齐方式为底部对齐
+.flex-between-end() {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+// 主轴上对齐方式为起点对齐，交叉轴上对齐方式为顶部对齐
+.flex-start() {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+// 主轴上对齐方式为起点对齐，交叉轴上对齐方式为居中对齐
+.flex-start-center() {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+// 主轴上对齐方式为起点对齐，交叉轴上对齐方式为底部对齐
+.flex-start-end() {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+
+// 主轴上对齐方式为终点对齐，交叉轴上对齐方式为顶部对齐
+.flex-end-start() {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+// 主轴上对齐方式为终点对齐，交叉轴上对齐方式为居中对齐
+.flex-end-center() {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+// 主轴上对齐方式为终点对齐，交叉轴上对齐方式为底部对齐
+.flex-end() {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+// 可自行编辑的 flex 样式
+.flex(@jc, @ai, @fd) {
+    display: flex;
+    justify-content: @jc;
+    align-items: @ai;
+    flex-direction: @fd;
+}

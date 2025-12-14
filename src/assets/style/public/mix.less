@@ -1,0 +1,67 @@
+// out: false
+
+@import url("./var.less");
+
+// 混合
+
+// 卡片
+.card() {
+    background: @card-bg;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
+
+    @media (max-width: @mobile-breakpoint) {
+        padding: 1.5rem 1.25rem;
+    }
+}
+
+// ----------
+
+// 悬停
+.hover(@h) {
+    transform: translateY(@h);
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.3);
+}
+
+// ----------
+
+// 链接
+.link(@color, @hover) {
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: @color;
+
+    &:hover {
+        color: @hover;
+        text-decoration: underline;
+    }
+}
+
+.link-border(@b-color, @b-hover) {
+    .link(@b-color, @b-hover);
+    border-bottom: 0.125rem solid @b-color;
+    text-decoration: none !important;
+
+    &:hover {
+        border-bottom-color: @b-hover;
+    }
+}
+
+.link-t-border(@t-color, @t-hover) {
+    .link-border(@t-color, @t-hover);
+    border-bottom-color: transparent;
+}
+
+// ----------
+
+// logo
+.logo-realmaybe() {
+    font-size: 2.5rem;
+    font-family: "Zhiyong";
+    margin-bottom: 0.625rem;
+    background: linear-gradient(45deg, @primary-color, @secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

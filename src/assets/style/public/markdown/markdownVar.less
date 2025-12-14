@@ -1,0 +1,76 @@
+// out: false
+
+@import url("../flex.less");
+@import url("../var.less");
+
+// =====  深空律动  ‑  专为 unplugin-vue-markdown 定制  =====
+
+// 核心色板
+@md-bg-deep: rgb(10, 14, 39); // 最深层背景（代码块、引用）
+@md-bg-card: rgba(23, 30, 60, 0.65); // 卡片打底，带透明让 body 渐变透出来
+@md-border: rgba(120, 150, 255, 0.18);
+
+@md-text-normal: rgb(230, 232, 240); // 正文
+@md-text-dim: rgb(168, 180, 208); // 次级文字
+@md-text-bright: rgb(255, 255, 255); // 高亮
+@md-text-muted: rgb(108, 122, 157); // 禁用、注释
+
+@md-primary: rgb(130, 170, 255); // 标题、链接
+@md-accent: rgb(199, 146, 234); // 代码关键字、引用左栏
+@md-warning: rgb(255, 203, 107); // 警告、强调
+@md-error: rgb(255, 108, 107); // 错误
+@md-success: rgb(165, 255, 0); // 成功
+@md-info: rgb(0, 188, 212); // 信息
+@md-inline-title: rgb(148, 216, 255); // 行内小标题
+
+@hr-dark-line: hsl(220, 80%, 32%); // 暗底场景：亮线
+@hr-dark-glow: hsl(220, 80%, 45%);
+@hr-light-line: hsl(220, 20%, 68%); // 亮底场景：暗线
+@hr-light-glow: hsl(220, 20%, 55%);
+
+// 排版基准
+@md-line-height: 1.75;
+@md-radius: 0.375rem;
+@md-font-code: "Fira Code", "Consolas", Monaco, monospace;
+
+// ==========
+
+// 混合（仅内部用）
+
+// 卡片
+.card-base() {
+    background: @md-bg-card;
+    border: 0.0625rem solid @md-border;
+    border-radius: @md-radius;
+    backdrop-filter: blur(0.75rem); // 毛玻璃feel
+}
+
+// 下划线
+.underline(@color) {
+    text-decoration: none;
+    border-bottom: 0.0625rem solid @color;
+}
+
+// 横线
+.hr-nebula(@line-color, @glow-color) {
+    position: relative;
+    margin: 2.5rem 0;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, @line-color 50%, transparent 100%);
+    overflow: visible;
+
+    // 中心光点
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: @glow-color;
+        box-shadow: 0 0 8px 2px @glow-color;
+        transform: translate(-50%, -50%);
+    }
+}

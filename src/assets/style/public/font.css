@@ -1,0 +1,75 @@
+/* 阿里巴巴普惠体 */
+
+@font-face {
+    font-family: "puhuiti";
+    src: url("/fonts/Alibaba-PuHuiTi-Bold.ttf") format("truetype");
+}
+
+
+/* 华文行楷 */
+
+@font-face {
+    font-family: "STXingkai";
+    src: url("/fonts/STXingkai.ttf") format("truetype");
+}
+
+
+/* 楷体 */
+
+@font-face {
+    font-family: "simkai";
+    src: url("/fonts/simkai.ttf") format("truetype");
+}
+
+
+/* 酷黑 */
+
+@font-face {
+    font-family: "kuhei";
+    src: url("/fonts/zhanku-kuhei.ttf") format("truetype");
+}
+
+
+/* 真黑 */
+
+@font-face {
+    font-family: "zhenhei";
+    src: url("/fonts/GenShinGothic-Light.ttf") format("truetype");
+}
+
+
+/* 圆体 */
+
+@font-face {
+    font-family: "yuanti";
+    src: url("/fonts/ResourceHanRoundedHC-Bold.ttf") format("truetype");
+}
+
+
+/* 悠哉 */
+
+@font-face {
+    font-family: "yozai";
+    src: url("/fonts/Yozai-Bold.ttf") format("truetype");
+}
+
+
+/* 摩登小方体 */
+
+@font-face {
+    font-family: "modengxiaofang";
+    src: url("/fonts/摩登小方体.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "摩登小方体";
+    src: url("/fonts/摩登小方体.ttf") format("truetype");
+}
+
+
+/* 杨任东竹石体 */
+
+@font-face {
+    font-family: "杨任东竹石体";
+    src: url("/fonts/杨任东竹石体-Bold.ttf") format("truetype");
+}
