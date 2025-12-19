@@ -14,6 +14,7 @@ export const views = {
     index: IndexPage, // 首页
     docs: () => import("@/views/DocsPage.vue"), // 文档
     blog: () => import("@/views/BlogPage.vue"), // 博客
+    changeLog: () => import("@/views/ChangeLogPage.vue"), // 更新日志
 };
 
 /**

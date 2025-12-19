@@ -295,7 +295,7 @@
             .action-block .main-site-link {
                 .cta-button {
                     min-width: auto;
-                    width: 100%;
+                    // width: 100%;
                     padding: 1rem 1.5rem;
                     font-size: 1.1rem;
                 }
@@ -307,7 +307,7 @@
                 align-items: center;
 
                 .option {
-                    width: 100%;
+                    width: auto;
                     max-width: 300px;
                     justify-content: center;
                 }

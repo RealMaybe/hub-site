@@ -123,19 +123,52 @@
 
     // 代码块
     pre {
+        position: relative;
         .card-base();
         padding: 1rem;
         margin: 0.75rem 0;
         overflow-x: auto;
         line-height: 1.55;
+        border-radius: 8px;
 
         code {
-            background: none;
+            display: block;
             color: @md-text-bright;
             padding: 0 !important;
             border-radius: 0;
             font-size: 0.875rem;
             font-family: "Fira Code", Consolas, "Courier New", monospace;
+            background: none !important;
+        }
+
+        .code-header {
+            .flex-between-center();
+            padding: 0.3em 0.6em;
+            background: #2d2d2d;
+            color: #d4d4d4;
+            font-family: "SF Mono", "Monaco", monospace;
+            font-size: 12px;
+
+            .code-language {
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .copy-button {
+                background: none;
+                border: none;
+                color: #a9a9a9;
+                cursor: pointer;
+                font-size: 14px;
+                padding: 2px 6px;
+                border-radius: 4px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: white;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+            }
         }
     }
 

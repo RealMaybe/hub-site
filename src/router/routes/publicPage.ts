@@ -14,4 +14,5 @@ export const publicPages: Array<RouteRecordRaw> = [
     createRoute("/index", views.index, "首页"),
     createRoute("/docs", views.docs, "关于"),
     createRoute("/blog", views.blog, "博客"),
+    createRoute("/change-log", views.changeLog, "更新日志"),
 ];
