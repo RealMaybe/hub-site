@@ -12,12 +12,14 @@ import { createRoute, createHiddenRoute } from "../factory";
  */
 export const publicPages: Array<RouteRecordRaw> = [
     createRoute("/index", views.index, "首页"),
-    createRoute("/docs", views.docs, "关于", void 0, [
-        createHiddenRoute(
-            "ProductReleaseNotes-VMK&VMKS.md",
-            components.docs.shop.ProductReleaseNotes,
-            "简介"
-        ),
+    createRoute("/docs", views.docs, "文档", void 0, [
+        createHiddenRoute("shop", void 0, "商品文档", void 0, [
+            createHiddenRoute(
+                "ProductReleaseNotes-VMK&VMKS.md",
+                components.docs.shop.ProductReleaseNotes,
+                "VMKS 发行说明文档"
+            ),
+        ]),
     ]),
     createRoute("/blog", views.blog, "博客"),
     createRoute("/shop", views.shop, "商店", void 0, [
