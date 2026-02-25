@@ -49,8 +49,6 @@
     </section>
 </template>
 
-<script setup lang="ts"></script>
-
 <style scoped lang="less">
 // 变量定义
 @primary-color: #4a4af0;

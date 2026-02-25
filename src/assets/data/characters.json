@@ -1,0 +1,36 @@
+{
+    "Ling": {
+        "title": "灵",
+        "character": [
+            {
+                "name": "Real_KyoShinn",
+                "description": ["许家大少爷，蓝发正太外表", "有点天然呆"]
+            },
+            {
+                "name": "Unreal_KyoKa",
+                "description": ["许家二少爷，异色瞳少年", "冷静寡言，只把温柔留给哥哥"]
+            },
+            {
+                "name": "尘羽流年",
+                "description": ["猫系亚人少主，银发猫耳", "温柔守矩，尾巴常被妹妹当抱枕"]
+            },
+            {
+                "name": "尘羽翊岚",
+                "description": ["傲娇大小姐，橘红发赤瞳", "讨厌传统，最黏哥哥"]
+            }
+        ]
+    },
+    "WorldPoem": {
+        "title": "世界之诗",
+        "character": [
+            {
+                "name": "墨执",
+                "description": ["蓝发蓝瞳的记录者", "沉静温柔，为使命殉道"]
+            },
+            {
+                "name": "聆玄",
+                "description": ["黑发黑瞳的见证者", "果决重情，为创世变革"]
+            }
+        ]
+    }
+}

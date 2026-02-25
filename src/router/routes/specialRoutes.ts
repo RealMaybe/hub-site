@@ -11,11 +11,15 @@ const REDIRECT_CONFIGS: Redirects = [
     { to: "/docs", from: ["/doc", "/document", "/documents", "/documentation"] },
     // 博客
     { to: "/blog", from: ["/bolg", "/blogs", "/blogging"] }, // 第一个纯属为了防止拼写错误
+    // 原创角色
+    { to: "/original-character", from: ["/oc", "/original-characters"] },
 ] as const;
 
 /* ========== */
 
-// 创建路由
+/**
+ * 转发路由列表
+ */
 export const specialRoutes: RouteRecordRaw[] = [
     { path: "/", redirect: "/index" },
     ...REDIRECT_CONFIGS.flatMap(config => createRedirects(config.to, config.from)),

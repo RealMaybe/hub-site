@@ -14,6 +14,8 @@ export const views = {
     index: IndexPage, // 首页
     docs: () => import("@/views/DocsPage.vue"), // 文档
     blog: () => import("@/views/BlogPage.vue"), // 博客
+    shop: () => import("@/views/ShopPage.vue"), // 商城
+    oc: () => import("@/views/OriginalCharacterPage.vue"), // 博客
     changeLog: () => import("@/views/ChangeLogPage.vue"), // 更新日志
 };
 
@@ -25,7 +27,13 @@ export const views = {
  * * 在视图组件中引入子组件时，需要使用 components 中的映射，而不是直接引入子组件
  */
 export const components = {
-    shop: {
-        // shopPolicies: () => import("@/features/shop/ShopPolicies.vue"),
+    docs: {
+        shop: {
+            ProductReleaseNotes: () => import("@/features/docs/ProductReleaseNotes.vue"),
+        },
     },
+    shop: {
+        notice: () => import("@/features/shop/ShippingNotice.vue"),
+    },
+    oc: {},
 };

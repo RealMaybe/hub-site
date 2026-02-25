@@ -10,3 +10,6 @@ export * from "./markdown/renderer";
 // blog
 export * from "./blog/BlogItem";
 export * from "./blog/ContentCache";
+
+// character
+export * from "./character/character";

@@ -27,7 +27,7 @@ export default defineConfig({
                 html: true,
                 linkify: true,
                 typographer: true,
-                highlight: function (str, lang) {
+                highlight: (str, lang) => {
                     if (lang && hljs.getLanguage(lang)) {
                         try {
                             return hljs.highlight(str, { language: lang }).value;
@@ -35,6 +35,7 @@ export default defineConfig({
                             console.error(err);
                         }
                     }
+
                     return ""; // 使用默认的转义
                 },
             },
@@ -96,9 +97,25 @@ export default defineConfig({
                     // 其他静态资源放在 assets 文件夹中
                     return "assets/[name]-[hash][extname]";
                 },
+                // 拆包
                 manualChunks: id => {
-                    // 将所有第三方依赖打包到一个名为 vendor 的文件中
-                    if (id.includes("node_modules")) return "vendor";
+                    if (id.includes("node_modules")) {
+                        // 核心库
+                        if (
+                            id.includes("vue") ||
+                            id.includes("vue-router") ||
+                            id.includes("pinia") ||
+                            id.includes("axios")
+                        )
+                            return "vue-core";
+
+                        // 第三方库
+                        if (id.includes("highlight.js")) return "highlightjs";
+                        if (id.includes("dayjs")) return "dayjs";
+                        if (id.includes("markdown-it")) return "markdown-it";
+
+                        return "vendor";
+                    }
                 },
             },
         },
