@@ -18,7 +18,7 @@
 
 <span class="tag-inline-title words5">徽章材质：</span>马口铁、纸、高弹回形针
 
-<span class="tag-inline-title words5">徽章大小：</span>58mm × 58mm
+<span class="tag-inline-title words5">徽章大小：</span>圆形，58mm 直径
 
 <span class="tag-inline-title words5">徽章工艺：</span>六色 UV 印刷、局部烫印
 
@@ -167,6 +167,18 @@
 
 ### 4. 联系方式
 
-- <span class="tag-inline-title words5">小店客服：</span>淘宝店铺 `RealMaybe的小铺` 客服页
+- <span class="tag-inline-title words5">小店客服：</span>淘宝店铺 <a href="https://realmaybe0429.taobao.com/" target="_blank">RealMaybe的小铺</a> `客服页`
 - <span class="tag-inline-title words5">主理人：</span>`RealMaybe`
 - <span class="tag-inline-title words5">QQ 群：</span><a href="https://qm.qq.com/q/lPZfo0np2o" target="_blank"> 徵羽摩柯的「绯羽学园」</a> `151642492`
+
+<div style="margin-top: 2rem; text-align: right; font-size: 1.5rem; font-weight: bold;">
+    <p>RealMaybe</p>
+    <p>2026/03/01</p>
+</div>
+
+---
+
+> **📌 最后的小说明**
+> 
+> - 这份文档会陪着「VMKS」系列产品一路走到发货，期间如有调整都会更新在这里。
+> - 记得偶尔回来看看，或关注群内通知～
